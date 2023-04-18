@@ -94,8 +94,6 @@ public class Simulation {
         System.out.println("Terminé après " + t + " étapes.");
     }
 
-
-
     /*
 Cette méthode est utilisée pour propager le feu à partir d'une cellule en feu vers les cellules adjacentes dans la grille.
 La première ligne nouvelleGrille[ligne][colonne] = false; permet de stocker les arbres qui ne sont pas en feu dans la grille mise à jour.
@@ -103,9 +101,6 @@ La deuxième ligne arbreBrule[ligne][colonne] = true; sert à stocker les arbres
 Les conditions if qui suivent permettent de propager le feu aux cases adjacentes avec une certaine probabilité (probabilitePropagation). Elles vérifient que la case adjacente n'est pas déjà en feu (!arbreBrule[ligne -1][colonne],
 par exemple) et que la probabilité de propagation est respectée (Math.random() < probabilitePropagation). Si les deux conditions sont remplies, la case adjacente est mise en feu dans la grille mise à jour (nouvelleGrille[ligne -1][colonne] = true;) et un message est affiché dans la console pour indiquer que le feu a été propagé en cette position (System.out.println("Feu propagé en (" + (ligne -1) + ", " + colonne + ")");).
 Le code vérifie les cases adjacentes dans les quatre directions possibles (en haut, en bas, à gauche et à droite).*/
-
-
-
 
     private void propagerFeu(boolean[][] arbreBrule, boolean[][] nouvelleGrille, int ligne, int colonne) {
 // La case est en feu, elle s'éteint

@@ -27,3 +27,6 @@ bin/
 
 ### Mac OS ###
 .DS_Store
+/.idea/ChatGPTCopilotChannelManager.xml
+/.idea/sonarlint/issuestore/index.pb
+/.idea/sonarlint/securityhotspotstore/index.pb
