@@ -1,15 +1,11 @@
-Ce code implémente une simulation de propagation d'incendie dans une forêt. Il lit les paramètres de la simulation à partir d'un fichier JSON, crée une grille 
-pour la forêt, simule la propagation de l'incendie et affiche la grille après chaque étape de simulation.
+Ce programme est une simulation basée sur un modèle probabiliste qui permet de simuler la propagation d'un feu de forêt. 
+Les paramètres de la simulation sont lus à partir d'un fichier de configuration JSON et sont utilisés pour initialiser la grille de simulation.
 
-La méthode lireConfiguration est appelée à partir de la méthode main pour lire les paramètres de la simulation à partir d'un fichier JSON, puis créer une nouvelle instance de la classe
-Simulation avec ces paramètres et appeler la méthode simuler.
+Au départ, une propagation initiale est appliquée à partir des positions spécifiées, puis la méthode simuler() est appelée. 
+Cette méthode est conçue pour poursuivre la propagation du feu à chaque étape tant qu'il y a encore des arbres en feu sur la grille.
 
-La classe Simulation a une méthode constructeur qui initialise les attributs de la classe hauteur, largeur, probabilitePropagation,
-grille et arbreBrule. La grille est initialisée avec les positions initiales des arbres en feu. La méthode simuler implémente une
-boucle while qui s'exécute tant qu'il reste des arbres en feu. Dans chaque itération de la boucle, elle affiche la grille, met à jour la
-grille en propageant le feu à partir des cases en feu et incrémente le nombre d'étapes de la simulation.
+La méthode propagerFeu() est utilisée pour propager le feu à partir des arbres en feu voisins et pour mettre à jour la grille. 
+Pour déterminer si la simulation est terminée, la méthode estEnFeu() est utilisée. Enfin, à chaque étape, la méthode afficherGrille() est utilisée pour afficher la grille de simulation.
 
-La méthode propagerFeu propage le feu à partir d'une case en feu à des cases adjacentes avec une certaine probabilité.
-Elle met également à jour les grilles nouvelleGrille et arbreBrule.
+Pour lire le fichier de configuration JSON et initialiser les paramètres de la simulation, le programme utilise la bibliothèque Gson.
 
-Le programme utilise la bibliothèque gson pour lire les paramètres à partir d'un fichier JSON.
